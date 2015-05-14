@@ -1,0 +1,13 @@
+@import "compass/css3";
+.animation {
+    @include animation(actionname 1s linear 1s both alternate);
+}
+
+@include keyframes(actionname) {
+    0% {
+        @include transform(translate3D(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3D(50px, 50px, 0));
+    }
+}

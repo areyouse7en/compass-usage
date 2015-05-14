@@ -11,3 +11,59 @@
         @include transform(translate3D(50px, 50px, 0));
     }
 }
+
+.appearance {
+    @include appearance(button);
+}
+
+.background-clip {
+    @include background-clip(padding-box);
+}
+
+.background-origin {
+    @include background-origin(padding-box);
+}
+
+.background-size {
+    @include background-size(50% 50%);
+}
+
+.border-radius {
+    @include border-radius(50%);
+}
+
+.box-shadow {
+    @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+}
+
+.box-sizing {
+    @include box-sizing(border-box);
+}
+
+.css-regions {
+    @include flow-from(target);
+    @include flow-into(target);
+}
+
+.column-count {
+    @include column-count(4);
+    @include column-rule(1px, solid, red);
+}
+
+.filter {
+    @include filter(hue-rotate(90deg));
+}
+
+.flexbox {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    div {
+        display: inline-block;
+        /* non-flexbox browsers */
+        
+        @include flex(1 0);
+    }
+}
+/* font-face */
+
+@include font-face("iconfont", font-files("//at.alicdn.com/t/font_1431598591_623468.ttf", "//at.alicdn.com/t/font_1431598591_623468.eot"));
